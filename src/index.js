@@ -10,7 +10,10 @@ const loadMoreBtn = document.querySelector('.load-more');
 const searchBtn = document.querySelector('button[type="submit"]');
 
 const imagesApiService = new ImagesApiService();
-let gallery = new SimpleLightbox('.gallery a', { showCounter: false });
+let gallery = new SimpleLightbox('.gallery a', {
+  captions: false,
+  showCounter: false,
+});
 
 searchForm.addEventListener('submit', onSearchForm);
 loadMoreBtn.addEventListener('click', onLoadMoreBtn);
